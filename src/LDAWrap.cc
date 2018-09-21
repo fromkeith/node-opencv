@@ -1,5 +1,7 @@
 #include "OpenCV.h"
 
+#ifdef HAVE_OPENCV_LDA
+
 #if CV_MAJOR_VERSION >= 3
 #ifdef __GNUC__
 #warning TODO: port me to OpenCV 3
@@ -96,3 +98,4 @@ NAN_METHOD(LDAWrap::SubspaceReconstruct) {
 }
 
 #endif // End version > 2.4
+#endif // end HAVE_OPENCV_LDA
