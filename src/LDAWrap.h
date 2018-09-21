@@ -1,5 +1,6 @@
 #include "OpenCV.h"
 
+#ifdef HAVE_OPENCV_LDA
 #if ((CV_MAJOR_VERSION == 2) && (CV_MINOR_VERSION >=4))
 
 #include "opencv2/contrib/contrib.hpp"
@@ -17,3 +18,4 @@ public:
 };
 
 #endif
+#endif //HAVE_OPENCV_LDA
