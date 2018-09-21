@@ -59,7 +59,9 @@ extern "C" void init(Local<Object> target) {
   #ifdef HAVE_OPENCV_FEATURES2D
     Features::Init(target);
   #endif
-  LDAWrap::Init(target);
+  #ifdef HAVE_OPENCV_LDA
+    LDAWrap::Init(target);
+  #endif
 #endif
 #endif
 #ifdef HAVE_BACKGROUNDSUBTRACTOR
